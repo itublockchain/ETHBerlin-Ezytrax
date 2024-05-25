@@ -7,12 +7,21 @@
   "license": "MIT",
   "dependencies": {
     "@chainlink/contracts": "0.8",
+    "@ethersproject/bignumber": "^5.7.0",
     "@openzeppelin/contracts": "^5.0.2",
+    "@types/circomlibjs": "^0.1.6",
+    "axios": "^1.7.2",
+    "bitcoinjs-lib": "^6.1.5",
     "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ecpair": "^2.1.0",
     "ethers": "^6.12.1",
+    "express": "^4.19.2",
+    "ffjavascript": "^0.3.0",
     "merkle-js": "^0.0.2",
+    "poseidon-solidity": "^0.0.5",
     "tiny-secp256k1": "^2.2.3"
   }
 }
