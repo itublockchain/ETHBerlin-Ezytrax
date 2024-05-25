@@ -1,14 +1,27 @@
 import { buildPoseidon } from "circomlibjs";
+import { randomBytes } from "crypto";
 
-export async function generateCommitment(
-  nullifier: bigint,
-  secret: bigint
-): Promise<string> {
+async function generatePoseidonHash(inputs: bigint[]): Promise<any> {
   const poseidon = await buildPoseidon();
+  const hash = poseidon(inputs);
+  return hash;
+}
 
-  const inputs = [nullifier, secret];
+export async function generateSecretAndNullifier() {
+  // Generate random nullifier and secret
+  const nullifier = BigInt("0x" + randomBytes(32).toString("hex"));
+  const secret = BigInt("0x" + randomBytes(32).toString("hex"));
 
-  const commitment = poseidon(inputs);
+  // Compute the commitment using Poseidon hash
+  const commitment = await generatePoseidonHash([nullifier, secret]);
 
-  return commitment.toString();
+  console.log("Nullifier:", nullifier.toString());
+  console.log("Secret:", secret.toString());
+  console.log("Commitment:", commitment.toString());
+
+  // Store nullifier and secret in local storage
+  localStorage.setItem("nullifier", nullifier.toString());
+  localStorage.setItem("secret", secret.toString());
+
+  return commitment;
 }
