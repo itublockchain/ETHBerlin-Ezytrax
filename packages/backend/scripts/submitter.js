@@ -1,17 +1,13 @@
 const axios = require("axios"); // HTTP client
 const { ethers } = require("ethers"); // Ethereum JavaScript API
-const fs = require("fs");
-const envFilePath = "../env.json";
-const envFileContent = fs.readFileSync(envFilePath, "utf8");
-const envConfig = JSON.parse(envFileContent);
 
 // Configure Bitcoin node RPC
-const BTC_API_KEY = envConfig.BTC_API_KEY;
+const BTC_API_KEY = process.env.BTC_API_KEY;
 const btcRpcUrl = `https://go.getblock.io/${BTC_API_KEY}`;
 console.log("btcRpcUrl:", btcRpcUrl);
 
 // Configure your Ethereum node and Relay contract
-const ETH_API_KEY = envConfig.ETH_API_KEY;
+const ETH_API_KEY = process.env.ETH_API_KEY;
 const ethNodeUrl = `https://eth-sepolia.g.alchemy.com/v2/${ETH_API_KEY}`;
 const relayContractAddress = "";
 const relayContractAbi = [
@@ -90,7 +86,7 @@ const relayContractAbi = [
 ];
 
 // Initialize Ethereum ethers connection
-const privateKey = envConfig.ETH_PRIVATE_KEY;
+const privateKey = process.env.ETH_PRIVATE_KEY;
 const provider = new ethers.JsonRpcProvider(ethNodeUrl);
 const wallet = new ethers.Wallet(privateKey, provider);
 

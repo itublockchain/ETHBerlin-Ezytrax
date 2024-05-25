@@ -3,13 +3,9 @@ const { MerkleTree } = require("merkletreejs");
 const Merkle = require("merkle-js");
 const SHA256 = require("crypto-js/sha256");
 const { ethers } = require("ethers"); // Ethereum JavaScript API
-const fs = require("fs");
-const envFilePath = "../env.json";
-const envFileContent = fs.readFileSync(envFilePath, "utf8");
-const envConfig = JSON.parse(envFileContent);
 
 const btcRpcUrl = `https://api.blockcypher.com/v1/btc/test3/`;
-const ETH_API_KEY = envConfig.ETH_API_KEY;
+const ETH_API_KEY = process.env.ETH_API_KEY;
 const ethNodeUrl = `https://eth-sepolia.g.alchemy.com/v2/${ETH_API_KEY}`;
 const relayContractAddress = "";
 const relayContractAbi = [
@@ -87,7 +83,7 @@ const relayContractAbi = [
   },
 ];
 // Initialize Ethereum ethers connection
-const privateKey = envConfig.ETH_PRIVATE_KEY;
+const privateKey = process.env.ETH_PRIVATE_KEY;
 const provider = new ethers.JsonRpcProvider(ethNodeUrl);
 const wallet = new ethers.Wallet(privateKey, provider);
 const relayContract = new ethers.Contract(
