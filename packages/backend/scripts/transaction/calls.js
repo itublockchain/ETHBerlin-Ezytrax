@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 const createUTXO = require("./createUTXO");
 // Configure Bitcoin Api
 const btcApiBase = `https://api.blockcypher.com/v1/btc/test3/`;

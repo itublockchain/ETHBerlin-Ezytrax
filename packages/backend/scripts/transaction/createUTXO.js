@@ -70,7 +70,7 @@ async function getHexes(address, poseidonHash) {
   console.log("Amount: 10000");
   console.log("Address:", address);
   psbt.addOutput({
-    address: multisigAddress, // This will change with VAULT Bridge Address
+    address: address, // This will change with VAULT Bridge Address
     value: 50000,
   });
   console.log("First Output Added");
