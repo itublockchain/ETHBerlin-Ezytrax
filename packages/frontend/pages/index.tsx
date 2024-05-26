@@ -108,7 +108,7 @@ export default function Home() {
                 </div>
               </div>
               <input type="text" placeholder="bc1qudk7cvu24wlxd7945rxfayj7f7kjfgve99zt5f" className="px-4 py-2 rounded-full outline-none bg-[#EDD8D8] text-[#686868] placeholder:text-[#686868]" />
-              <div className="py-2 px-4 rounded-full cursor-pointer bg-[#ABA5A5] text-[#686868] placeholder:text-[#686868]">
+              <div className="py-2 px-4 rounded-full cursor-pointer bg-white text-[#686868] placeholder:text-[#686868]">
                 <p className="text-center font-medium text-base text-black">Deposit</p>
               </div>
             </div>
