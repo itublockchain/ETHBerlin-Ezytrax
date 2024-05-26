@@ -30,14 +30,6 @@ export default function Orders() {
         sells: 1,
         wants: 2
     },
-    {
-        sells: 1,
-        wants: 2
-    },
-    {
-        sells: 1,
-        wants: 2
-    }
   ]);
 
   const isInitialMount = useRef(true);
@@ -78,7 +70,7 @@ export default function Orders() {
   const [commitment, setCommitment] = useState<string | null>(null);
   return (
     <div
-      className={`min-h-screen ${inter.className} bg-[#F5F2F2] py-4`}
+      className={`min-h-screen ${inter.className} bg-[#312D2D] py-4`}
     >
       <Header />
       <div className="container mx-auto">
@@ -116,20 +108,20 @@ export default function Orders() {
         {commitment && <p>Commitment: {commitment}</p>} */}
         <div className="flex justify-center items-center">
           <Image src={Baloons} alt="Logo" className="w-full" />
-          <div className="absolute mt-[-120px] bg-white backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
+          <div className="absolute mt-[-120px] bg-[#3E3E3E] backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
             <div className="flex flex-col gap-9 py-4">
-              <h3 className="text-center font-mediun text-4xl gap-4">Orders</h3>
+              <h3 className="text-white text-center font-mediun text-4xl gap-4">Orders</h3>
               <div className="container mx-auto flex flex-wrap gap-4 justify-center">
                 {
                     data.map((el, i) => {
                         return (
-                            <div className="py-16 px-16 bg-gray-200 rounded-3xl font-semibold text-xl text-[#655858] flex flex-col gap-12">
+                            <div className="py-16 px-16 bg-[#606060] rounded-3xl font-semibold text-xl text-[#D8D8D8] flex flex-col gap-12">
                                 <div className="text-center">
                                     <p>Sells: {(el as any)?.sells} ETH</p>
                                     <p>Wants: {(el as any)?.wants} ETH</p>
                                 </div>
                                 <div className="flex justify-center items-center">
-                                    <button className="border-2 py-3 px-12 rounded-2xl bg-white">FILL</button>
+                                    <button className="border-2 py-2 px-12 rounded-full bg-[#D7D7D7] text-[#686868]">FILL</button>
                                 </div>
                             </div>
                         );

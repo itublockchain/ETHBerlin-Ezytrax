@@ -52,7 +52,7 @@ export default function Orders() {
   const [commitment, setCommitment] = useState<string | null>(null);
   return (
     <div
-      className={`min-h-screen ${inter.className} bg-[#F5F2F2] py-4`}
+      className={`min-h-screen ${inter.className} bg-[#312D2D] py-4`}
     >
       <Header />
       <div className="container mx-auto">
@@ -90,21 +90,21 @@ export default function Orders() {
         {commitment && <p>Commitment: {commitment}</p>} */}
         <div className="flex justify-center items-center">
           <Image src={Baloons} alt="Logo" className="w-full" />
-          <div className="absolute mt-[-120px] bg-white backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
+          <div className="absolute mt-[-120px] bg-[#3E3E3E] backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
             <div className="flex flex-col gap-9 py-4">
-              <h3 className="text-center font-mediun text-4xl gap-4">Withdraw</h3>
+              <h3 className="text-center font-mediun text-4xl gap-4 text-white">Withdraw</h3>
               <div>
                 <div className="flex flex-col gap-4 items-center">
-                    <h3>Secret</h3>
-                    <input type="text" className="w-[600px] py-2 text-black font-semibold indent-4 rounded-full outline-none bg-gray-100" />
+                    <h3 className="text-white">Secret</h3>
+                    <input type="text" className="w-[600px] py-2 text-[#686868] font-semibold indent-4 rounded-full outline-none bg-gray-100" />
                 </div>
                 <div className="border-b-[1px] border-gray-500 my-8" />
                 <div className="flex flex-col gap-4 items-center">
-                    <h3>Recipient Address</h3>
-                    <input type="text" className="w-[600px] py-2 text-black font-semibold indent-4 rounded-full outline-none bg-gray-100" />
+                    <h3 className="text-white">Recipient Address</h3>
+                    <input type="text" className="w-[600px] py-2 text-[#686868] font-semibold indent-4 rounded-full outline-none bg-gray-100" />
                 </div>
                 <div className="flex justify-center items-center mt-8">
-                    <button className="py-2 px-12 bg-yellow-100 rounded-full font-semibold">Withdraw</button>
+                    <button className="py-2 px-12 bg-white rounded-full font-semibold">Withdraw</button>
                 </div>
               </div>
             </div>

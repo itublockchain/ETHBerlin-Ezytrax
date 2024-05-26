@@ -51,7 +51,7 @@ export default function Home() {
   const [commitment, setCommitment] = useState<string | null>(null);
   return (
     <div
-      className={`min-h-screen ${inter.className} bg-[#F5F2F2] py-4`}
+      className={`min-h-screen ${inter.className} bg-[#312D2D] py-4`}
     >
       <Header />
       <div className="container mx-auto">
@@ -89,14 +89,14 @@ export default function Home() {
         {commitment && <p>Commitment: {commitment}</p>} */}
         <div className="flex justify-center items-center">
           <Image src={Baloons} alt="Logo" className="w-full" />
-          <div className="absolute mt-[-120px] bg-white backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
+          <div className="absolute mt-[-120px] bg-[#3E3E3E] backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
             <div className="flex flex-col gap-9 py-4">
               <h3 className="text-center font-mediun text-4xl gap-4">Create Order</h3>
               <div className="flex flex-row gap-28">
                 <div className="flex flex-col items-center gap-6">
                   <Image src={Ethereum} alt="eth" width={66} />
                   <h3>Ethereum</h3>
-                  <input type="text" placeholder="0.003" className="px-4 py-2 rounded-full outline-none" />
+                  <input type="text" placeholder="0.003" className="px-4 py-2 rounded-full outline-none bg-[#ABA5A5] text-[#686868] placeholder:text-[#686868]" />
                 </div>
                 <div className="flex items-center">
                   <Image src={Right} alt="btc" />
@@ -104,12 +104,12 @@ export default function Home() {
                 <div className="flex flex-col items-center gap-6">
                   <Image src={Bitcoin} alt="btc" width={116} />
                   <h3>Bitcoin</h3>
-                  <input type="text" placeholder="0.2340" className="px-4 py-2 rounded-full outline-none" />
+                  <input type="text" placeholder="0.2340" className="px-4 py-2 rounded-full outline-none bg-[#ABA5A5] text-[#686868] placeholder:text-[#686868]" />
                 </div>
               </div>
-              <input type="text" placeholder="bc1qudk7cvu24wlxd7945rxfayj7f7kjfgve99zt5f" className="px-4 py-2 rounded-full outline-none" />
-              <div className="py-2 px-4 bg-white rounded-full cursor-pointer">
-                <p className="text-center font-medium text-base">Deposit</p>
+              <input type="text" placeholder="bc1qudk7cvu24wlxd7945rxfayj7f7kjfgve99zt5f" className="px-4 py-2 rounded-full outline-none bg-[#EDD8D8] text-[#686868] placeholder:text-[#686868]" />
+              <div className="py-2 px-4 rounded-full cursor-pointer bg-[#ABA5A5] text-[#686868] placeholder:text-[#686868]">
+                <p className="text-center font-medium text-base text-black">Deposit</p>
               </div>
             </div>
           </div>
