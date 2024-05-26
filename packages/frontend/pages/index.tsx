@@ -91,11 +91,11 @@ export default function Home() {
           <Image src={Baloons} alt="Logo" className="w-full" />
           <div className="absolute mt-[-120px] bg-[#3E3E3E] backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
             <div className="flex flex-col gap-9 py-4">
-              <h3 className="text-center font-mediun text-4xl gap-4">Create Order</h3>
+              <h3 className="text-center font-mediun text-4xl gap-4 text-white">Create Order</h3>
               <div className="flex flex-row gap-28">
                 <div className="flex flex-col items-center gap-6">
                   <Image src={Ethereum} alt="eth" width={66} />
-                  <h3>Ethereum</h3>
+                  <h3 className="text-white">Ethereum</h3>
                   <input type="text" placeholder="0.003" className="px-4 py-2 rounded-full outline-none bg-[#ABA5A5] text-[#686868] placeholder:text-[#686868]" />
                 </div>
                 <div className="flex items-center">
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center gap-6">
                   <Image src={Bitcoin} alt="btc" width={116} />
-                  <h3>Bitcoin</h3>
+                  <h3 className="text-white">Bitcoin</h3>
                   <input type="text" placeholder="0.2340" className="px-4 py-2 rounded-full outline-none bg-[#ABA5A5] text-[#686868] placeholder:text-[#686868]" />
                 </div>
               </div>
