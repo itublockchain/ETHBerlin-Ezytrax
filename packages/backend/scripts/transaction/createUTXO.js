@@ -3,7 +3,7 @@ const axios = require("axios");
 
 // Calculate the fee
 const txSize = 1 * 180 + 34 * 3 + 9;
-let fee = txSize * 33;
+let fee = 17000;
 console.log("Fee: ", fee);
 
 let inputs = [];
