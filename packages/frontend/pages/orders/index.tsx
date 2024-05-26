@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Orders() {
   const [connected, setConnected] = useState(false);
   const [accounts, setAccounts] = useState<string[]>([]);
   const [bitaddress, setAddress] = useState("");
@@ -91,7 +91,7 @@ export default function Home() {
           <Image src={Baloons} alt="Logo" className="w-full" />
           <div className="absolute mt-[-120px] bg-white backdrop-blur-lg bg-opacity-60 w-full flex justify-center py-8">
             <div className="flex flex-col gap-9 py-4">
-              <h3 className="text-center font-mediun text-4xl gap-4">Create Order</h3>
+              <h3 className="text-center font-mediun text-4xl gap-4">Orders</h3>
               <div className="flex flex-row gap-28">
                 <div className="flex flex-col items-center gap-6">
                   <Image src={Ethereum} alt="eth" width={66} />
